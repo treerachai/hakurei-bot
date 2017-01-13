@@ -10,16 +10,12 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "discordie": "^0.10.0",
+    "discordie": "git://github.com/qeled/discordie.git#dev",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "extend": "^3.0.0",
-    "googleapis": "^16.0.0",
+    "googleapis": "^16.1.0",
     "request": "^2.79.0"
-  },
-  "devDependencies": {
-    "mocha": "^3.2.0",
-    "sinon": "^1.17.7"
   },
   "scripts": {
     "start": "node server.js"
