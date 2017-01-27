@@ -45,6 +45,5 @@ if (args['help']) {
     printHelp();
 } else {
     require('./lib/Options')(expand(args));
-    new (require('./lib/Server'))();
-    new (require('./lib/Client'))();
+    require('./lib/Services')();
 }
