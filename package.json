@@ -1,6 +1,6 @@
 {
   "name": "Discord-NSFW",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Another Discord Bot",
   "license": "MIT",
   "main": "server.js",
