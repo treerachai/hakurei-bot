@@ -44,6 +44,5 @@ var args = parseArgs(process.argv.slice(2));
 if (args['help']) {
     printHelp();
 } else {
-    require('./lib/Options')(expand(args));
-    require('./lib/Services')();
+    require('./lib/Services')(require('./lib/Options')(expand(args)));
 }
