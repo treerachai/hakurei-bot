@@ -28,12 +28,12 @@ function expand(obj) {
 }
 
 function printHelp() {
-    var p = JSON.parse(fs.readFileSync('./package.json'));
+    var p = JSON.parse(require('fs').readFileSync('./package.json'));
     console.log(p.name + ' v' + p.version);
     console.log(p.description);
     console.log();
     console.log('Usage:');
-    console.log('  discord-nsfw [--<key>=<value>]... <config-file>...');
+    console.log('  hakurei-bot [--<key>=<value>]... <config-file>...');
     console.log();
     console.log('Options:');
     console.log('  --<key>=<value>  Replace config file <key> option with <value>.');

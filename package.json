@@ -1,12 +1,12 @@
 {
-  "name": "Discord-NSFW",
-  "version": "1.0.1",
-  "description": "Another Discord Bot",
+  "name": "Hakurei-Bot",
+  "version": "1.0.2",
+  "description": "Discord Bot for a Brazilian Touhou Community",
   "license": "MIT",
   "main": "server.js",
   "private": true,
   "bin": {
-    "discord-nsfw": "./cli.js"
+    "hakurei-bot": "./cli.js"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -20,9 +20,14 @@
     "request": "^2.79.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "generate-docs": "rm -r docs && node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "optionalDependencies": {
     "bluebird": "^3.4.7"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.3",
+    "minami": "^1.1.1"
   }
 }
