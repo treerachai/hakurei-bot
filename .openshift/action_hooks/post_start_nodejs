@@ -37,5 +37,3 @@ if [ "$zcode" -eq 200 ]; then
    echo "  - Version from test URI = $(curl -s $app_uri | grep 'Version')"
    echo ""
 fi
-
-

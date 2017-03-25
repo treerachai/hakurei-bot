@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "generate-docs": "rm -r docs && node_modules/.bin/jsdoc -c jsdoc.json"
+    "generate-docs": "(rm -r docs ||:) && node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "optionalDependencies": {
     "bluebird": "^3.4.7"
