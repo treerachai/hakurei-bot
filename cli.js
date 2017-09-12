@@ -28,21 +28,21 @@ function expand(obj) {
 }
 
 function printHelp() {
-    var p = JSON.parse(require('fs').readFileSync('./package.json'));
+    var p = JSON.parse(require('fs').readFileSync(__dirname + '/package.json'));
     console.log(p.name + ' v' + p.version);
     console.log(p.description);
     console.log();
     console.log('Usage:');
-    console.log('  hakurei-bot [--<key>=<value>]... <config-file>...');
+    console.log('    hakurei-bot [--<key>=<value> ...]');
     console.log();
-    console.log('Options:');
-    console.log('  --<key>=<value>  Replace config file <key> option with <value>.');
-    console.log();
+    console.log('Example:');
+    console.log('    hakurei-bot --discord.token=MYDISCORDTOKEN --express.port=80 --mongo.url=http://127.0.0.1/dbname');
 }
 
+// TODO better cli
 var args = parseArgs(process.argv.slice(2));
 if (args['help']) {
     printHelp();
 } else {
-    require('./lib/Services')(require('./lib/Options')(expand(args)));
+    require('./lib/services')(require('./lib/options')(expand(args)));
 }
